@@ -283,7 +283,7 @@ class IPAdapter_CS:
                                                                                                   dtype=torch.float16)
             self.content_image_processor = AutoImageProcessor.from_pretrained(content_image_encoder_path)
         else:
-            self.content_image_encoder = CLIPVisionModelWithProjection.from_pretrained(self.image_encoder_path).to(
+            self.content_image_encoder = CLIPVisionModelWithProjection.from_pretrained(self.image_encoder_path, subfolder="sdxl_models/image_encoder").to(
                 self.device, dtype=torch.float16
             )
             self.content_image_processor = CLIPImageProcessor()
