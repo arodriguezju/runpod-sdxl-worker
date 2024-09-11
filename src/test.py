@@ -1,0 +1,3 @@
+from rp_handler import generate_csgo_example_image
+
+generate_csgo_example_image()
