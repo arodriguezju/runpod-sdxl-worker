@@ -183,11 +183,11 @@ def generate_image(job):
 def generate_csgo_example_image(job):
     images = run_first_example()
     # upload images
-    image_urls = _save_and_upload_images(images, job['id'])
+    # image_urls = _save_and_upload_images(images, job['id'])
     image_shape = images[0].size
     return {
         "images": image_shape,        
         "refresh_worker": True
     }
 
-runpod.serverless.start({"handler": generate_csgo_example_image})
+# runpod.serverless.start({"handler": generate_csgo_example_image})

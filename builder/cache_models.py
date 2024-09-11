@@ -45,8 +45,10 @@ def get_diffusion_pipelines():
                                   "madebyollin/sdxl-vae-fp16-fix")
 
     #control net
+    # Todo clone only the necessary files
+
     os.system('git clone https://huggingface.co/TTPlanet/TTPLanet_SDXL_Controlnet_Tile_Realistic')
-    os.system('mv TTPLanet_SDXL_Controlnet_Tile_Realistic/TTPLANET_Controlnet_Tile_realistic_v2_fp16.safetensors TTPLanet_SDXL_Controlnet_Tile_Realistic/diffusion_pytorch_model.fp16.safetensors')
+    os.system('mv TTPLanet_SDXL_Controlnet_Tile_Realistic/TTPLANET_Controlnet_Tile_realistic_v2_fp16.safetensors TTPLanet_SDXL_Controlnet_Tile_Realistic/diffusion_pytorch_model.safetensors')
 
     fetch_pretrained_model(ControlNetModel,
                                   "./TTPLanet_SDXL_Controlnet_Tile_Realistic/", **common_args)
