@@ -1,7 +1,7 @@
 # builder/model_fetcher.py
 
 import torch
-from diffusers import StableDiffusionXLPipeline, StableDiffusionXLImg2ImgPipeline, AutoencoderKL, ControlNetModel, CLIPVisionModelWithProjection
+from diffusers import StableDiffusionXLPipeline, StableDiffusionXLImg2ImgPipeline, AutoencoderKL, ControlNetModel
 from transformers import CLIPImageProcessor, CLIPVisionModelWithProjection
 
 import os
