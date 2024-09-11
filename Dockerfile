@@ -23,3 +23,6 @@ RUN python3.11 /cache_models.py && \
 ADD src .
 
 CMD python3.11 -u /rp_handler.py
+#TODO install pip just in case
+# curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+# python3 get-pip.py --force-reinstall
