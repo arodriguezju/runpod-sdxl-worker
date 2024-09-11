@@ -42,7 +42,7 @@ def get_diffusion_pipelines():
 
     #vae
     fetch_pretrained_model(AutoencoderKL,
-                                  "madebyollin/sdxl-vae-fp16-fix", **common_args)
+                                  "madebyollin/sdxl-vae-fp16-fix")
 
     #control net
     os.system('git clone https://huggingface.co/TTPlanet/TTPLanet_SDXL_Controlnet_Tile_Realistic')
