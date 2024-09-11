@@ -180,7 +180,7 @@ def generate_image(job):
     return results
 
 @torch.inference_mode()
-def generate_csgo_example_image(job):
+def generate_csgo_example_image():
     images = run_first_example()
     # upload images
     # image_urls = _save_and_upload_images(images, job['id'])
