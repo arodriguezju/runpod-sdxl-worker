@@ -29,7 +29,7 @@ image_encoder_path = "h94/IP-Adapter/sdxl_models/image_encoder"
 csgo_ckpt ='InstantX/CSGO/csgo_4_32.bin'
 pretrained_vae_name_or_path ='madebyollin/sdxl-vae-fp16-fix'
 # controlnet_path = "TTPlanet/TTPLanet_SDXL_Controlnet_Tile_Realistic"
-controlnet_path = "./TTPLanet_SDXL_Controlnet_Tile_Realistic/diffusion_pytorch_model.safetensors"
+controlnet_path = "./TTPLanet_SDXL_Controlnet_Tile_Realistic/"
 
 weight_dtype = torch.float16
 
