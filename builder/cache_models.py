@@ -62,7 +62,7 @@ def get_diffusion_pipelines():
     #Check if needed
     BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-large")
     BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-large")
-  
+    return
     return pipe
 
 
