@@ -2,6 +2,8 @@
 
 import torch
 from diffusers import StableDiffusionXLPipeline, StableDiffusionXLImg2ImgPipeline, AutoencoderKL, ControlNetModel, CLIPVisionModelWithProjection
+from transformers import CLIPImageProcessor, CLIPVisionModelWithProjection
+
 import os
 
 def fetch_pretrained_model(model_class, model_name, **kwargs):
