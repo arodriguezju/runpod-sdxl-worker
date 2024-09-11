@@ -289,7 +289,7 @@ class IPAdapter_CS:
             self.content_image_processor = CLIPImageProcessor()
         # model.requires_grad_(False)
 
-        self.image_encoder = CLIPVisionModelWithProjection.from_pretrained(self.image_encoder_path).to(
+        self.image_encoder = CLIPVisionModelWithProjection.from_pretrained(self.image_encoder_path, subfolder="sdxl_models/image_encoder").to(
             self.device, dtype=torch.float16
         )
         # if self.use_CSD is not None:
