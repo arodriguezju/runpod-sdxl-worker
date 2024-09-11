@@ -1,6 +1,8 @@
 import sys
 # sys.path.append("../")
 sys.path.append("./")
+sys.path.insert(0, '/workspace/runpod-sdxl-worker/src/processors/csgo/')
+
 import torch
 from torchvision import transforms
 from ip_adapter.utils import BLOCKS as BLOCKS
