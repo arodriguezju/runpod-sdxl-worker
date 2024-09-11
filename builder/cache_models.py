@@ -46,10 +46,10 @@ def get_diffusion_pipelines():
 
     #control net
     os.system('git clone https://huggingface.co/TTPlanet/TTPLanet_SDXL_Controlnet_Tile_Realistic')
-    os.system('mv TTPLanet_SDXL_Controlnet_Tile_Realistic/TTPLANET_Controlnet_Tile_realistic_v2_fp16.safetensors TTPLanet_SDXL_Controlnet_Tile_Realistic/diffusion_pytorch_model.safetensors')
+    os.system('mv TTPLanet_SDXL_Controlnet_Tile_Realistic/TTPLANET_Controlnet_Tile_realistic_v2_fp16.safetensors TTPLanet_SDXL_Controlnet_Tile_Realistic/diffusion_pytorch_model.fp16.safetensors')
 
     fetch_pretrained_model(ControlNetModel,
-                                  "./TTPLanet_SDXL_Controlnet_Tile_Realistic/", **common_args)
+                                  "./TTPLanet_SDXL_Controlnet_Tile_Realistic/")
     
 
     #ip adapter
