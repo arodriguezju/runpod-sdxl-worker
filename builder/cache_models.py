@@ -2,7 +2,7 @@
 
 import torch
 from diffusers import StableDiffusionXLPipeline, StableDiffusionXLImg2ImgPipeline, AutoencoderKL, ControlNetModel, CLIPVisionModelWithProjection
-
+import os
 
 def fetch_pretrained_model(model_class, model_name, **kwargs):
     '''
@@ -25,8 +25,7 @@ def get_diffusion_pipelines():
     '''
     Fetches the Stable Diffusion XL pipelines from the HuggingFace model hub.
     '''
-    !apt-get install git-lfs
-
+    os.system('apt-get install git-lfs')
     common_args = {
         "torch_dtype": torch.float16,
         "variant": "fp16",
@@ -44,15 +43,15 @@ def get_diffusion_pipelines():
                                   "madebyollin/sdxl-vae-fp16-fix", **common_args)
 
     #control net
-    !git clone https://huggingface.co/TTPlanet/TTPLanet_SDXL_Controlnet_Tile_Realistic
-    !mv TTPLanet_SDXL_Controlnet_Tile_Realistic/TTPLANET_Controlnet_Tile_realistic_v2_fp16.safetensors TTPLanet_SDXL_Controlnet_Tile_Realistic/diffusion_pytorch_model.safetensors
+    os.system('git clone https://huggingface.co/TTPlanet/TTPLanet_SDXL_Controlnet_Tile_Realistic')
+    os.system('mv TTPLanet_SDXL_Controlnet_Tile_Realistic/TTPLANET_Controlnet_Tile_realistic_v2_fp16.safetensors TTPLanet_SDXL_Controlnet_Tile_Realistic/diffusion_pytorch_model.safetensors')
 
     fetch_pretrained_model(ControlNetModel,
                                   "./TTPLanet_SDXL_Controlnet_Tile_Realistic/", **common_args)
     
 
     #ip adapter
-    !git clone https://huggingface.co/InstantX/CSGO
+    os.system('git clone https://huggingface.co/InstantX/CSGO')
 
     
     #image_encoder
